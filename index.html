@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Project 78, Family Book
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>
+            My Family Book
+        </h1>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/51wZfvZev-L._SX258_BO1,204,203,200_.jpg" width="500px" height="500px" id="Familyimages">
+        <h2 id="Familynames">
+            Family
+        </h2>
+        <button type="button" onclick="update();">Next</button>
+    </body>
+    <script>
+        var names = [ "Gautam Kohli", "Bella Kohli", "Fluffy Kohli", "Sumaya Kohli", "Yuvraj Kohli"];
+        var images = 
+        [ "Image/The_Papa.JPG", 
+        "Image/Chi_Girl.jpg", "Image/Chi_Baby.jpg", "Image/D-Mama.jpg", "Image/BUM.jpg"];
+        var i = 0;
+        function update(){
+            document.getElementById("Familyimages").src = images[i];
+            document.getElementById("Familynames").innerHTML = names[i];
+            i++;
+            if (i==5){
+            i=0;
+            }
+        }
+    </script>
+</html>
